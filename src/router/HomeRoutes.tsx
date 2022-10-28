@@ -1,6 +1,6 @@
 import { Home } from "../components/pages/Home";
 import { Setting } from "../components/pages/Setting";
-import { Useranagement } from "../components/pages/Useranagement";
+import { Useranagement } from "../components/pages/Usermanagement";
 
 export const homeRoutes = [
   {
