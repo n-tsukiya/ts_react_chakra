@@ -11,11 +11,13 @@ import { UserCard } from "../organisms/user/UserCard";
 import { useAllUsers } from "../../hooks/useAllUsers";
 import { UserDetailModal } from "../organisms/user/UserDetailModal";
 import { useSelectUser } from "../../hooks/useSelectUser";
+import { useLoginUser } from "../../hooks/useLoginUser";
 
 export const Useranagement: FC = memo(() => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { getUsers, loading, users } = useAllUsers();
   const { selectUser, onSelectUser } = useSelectUser();
+  const { loginUser } = useLoginUser();
 
   useEffect(() => {
     getUsers();
