@@ -18,7 +18,6 @@ export const Useranagement: FC = memo(() => {
   const { getUsers, loading, users } = useAllUsers();
   const { selectUser, onSelectUser } = useSelectUser();
   const { loginUser } = useLoginUser();
-  console.log(loginUser);
 
   useEffect(() => {
     getUsers();
@@ -52,7 +51,12 @@ export const Useranagement: FC = memo(() => {
           ))}
         </Wrap>
       )}
-      <UserDetailModal user={selectUser} isOpen={isOpen} onClose={onClose} />
+      <UserDetailModal
+        user={selectUser}
+        isOpen={isOpen}
+        isAdmin={loginUser?.isAdmin}
+        onClose={onClose}
+      />
     </>
   );
 });
