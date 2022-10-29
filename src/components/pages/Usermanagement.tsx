@@ -18,6 +18,7 @@ export const Useranagement: FC = memo(() => {
   const { getUsers, loading, users } = useAllUsers();
   const { selectUser, onSelectUser } = useSelectUser();
   const { loginUser } = useLoginUser();
+  console.log(loginUser);
 
   useEffect(() => {
     getUsers();
